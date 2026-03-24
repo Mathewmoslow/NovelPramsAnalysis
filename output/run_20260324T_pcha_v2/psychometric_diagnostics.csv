@@ -1,0 +1,4 @@
+subset,components,n_obs,k_items,cronbach_alpha,pa_factors_retained
+7-component full-coverage (n=188),"QUO41, QUO65, QUO257, QUO4, QUO5, QUO44, QUO101",188,7,0.8711408091128574,2.0
+12-component complete-case,"QUO179, QUO41, QUO65, QUO249, QUO75, QUO257, QUO296, QUO297, QUO4, QUO5, QUO44, QUO101",0,12,,0.0
+8-component strict pre-conception,"QUO179, QUO41, QUO65, QUO249, QUO75, QUO257, QUO296, QUO297",0,8,,
