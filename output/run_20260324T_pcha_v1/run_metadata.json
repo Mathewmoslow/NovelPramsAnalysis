@@ -1,0 +1,16 @@
+{
+  "run_id": "run_20260324T_pcha_v1",
+  "timestamp_utc": "2026-03-24T22:01:03.775741+00:00",
+  "python_version": "3.9.6 (default, Jan  9 2026, 11:03:41) \n[Clang 17.0.0 (clang-1700.6.4.2)]",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "panel_path": "/Users/mathewmoslow/Documents/AHU/PPD_Analysis/NovelPramsAnalysis/data/analysis_panel.csv",
+  "panel_sha256": "db32d98dff8d81b18be8293997baaf423274b68b61e733272bbecf7b34f0e9ce",
+  "panel_rows": 329,
+  "panel_indicator_cols": 231,
+  "ppd_panel_rows": 188,
+  "random_seed": 42,
+  "n_permutations": 5000,
+  "n_bootstrap": 5000,
+  "min_n": 30,
+  "min_sd": 0.25
+}

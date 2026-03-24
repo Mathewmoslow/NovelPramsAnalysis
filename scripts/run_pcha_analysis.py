@@ -349,9 +349,14 @@ def parallel_analysis(data_matrix: np.ndarray, n_iter: int = 1000,
 def main():
     parser = argparse.ArgumentParser(description="PCHA Analysis Pipeline")
     parser.add_argument(
-        "--analysis-master",
-        default=str(Path(__file__).resolve().parent.parent.parent /
-                    "analysis_output/pramstat_2000_2011/run_20260228T185246Z/analysis_master.csv"),
+        "--panel",
+        default=str(Path(__file__).resolve().parent.parent / "data" / "analysis_panel.csv"),
+        help="Path to pre-built analysis panel CSV (329 state-year rows)",
+    )
+    parser.add_argument(
+        "--qdict",
+        default=str(Path(__file__).resolve().parent.parent / "data" / "question_dictionary.csv"),
+        help="Path to question dictionary CSV",
     )
     parser.add_argument("--run-id", default="")
     parser.add_argument("--seed", type=int, default=RANDOM_SEED)
@@ -367,82 +372,25 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     fig_dir.mkdir(parents=True, exist_ok=True)
 
-    master_path = Path(args.analysis_master)
+    panel_path = Path(args.panel)
     print(f"[PCHA] Run ID: {run_id}")
     print(f"[PCHA] Seed: {seed}")
-    print(f"[PCHA] Master: {master_path}")
+    print(f"[PCHA] Panel: {panel_path}")
     print(f"[PCHA] Output: {out_dir}")
 
     # ===================================================================
-    # PHASE 0: LOAD AND BUILD PANEL
+    # PHASE 0: LOAD PRE-BUILT PANEL
     # ===================================================================
-    print("\n=== PHASE 0: DATA LOADING AND PANEL CONSTRUCTION ===")
-    master_hash = sha256_file(master_path)
-    df = pd.read_csv(master_path, low_memory=False)
-    print(f"  Loaded {len(df):,} rows, {df.shape[1]} columns")
-    print(f"  SHA-256: {master_hash[:16]}...")
-
-    # Filter to unstratified YES rows
-    mask = (
-        df["break_out"].isna() &
-        df["break_out_category"].isna() &
-        (df["binary_response_class"] == "yes")
-    )
-    sub = df[mask].copy()
-    sub["estimate"] = pd.to_numeric(sub["estimate"], errors="coerce")
-    sub["std_err"] = pd.to_numeric(sub["std_err"], errors="coerce")
-    print(f"  Unstratified YES rows: {len(sub):,}")
-
-    # Pivot to wide panel
-    panel = sub.pivot_table(
-        index=["location_abbr", "year"],
-        columns="question_id",
-        values="estimate",
-        aggfunc="first",
-    ).reset_index()
-    panel.columns.name = None
-    print(f"  Panel: {len(panel)} state-year rows × {panel.shape[1]-2} indicators")
-
-    # Also build SE panel for precision weighting
-    se_panel = sub.pivot_table(
-        index=["location_abbr", "year"],
-        columns="question_id",
-        values="std_err",
-        aggfunc="first",
-    ).reset_index()
-    se_panel.columns.name = None
-
-    # Build harmonized PPD outcome
-    if "QUO74" in panel.columns and "QUO219" in panel.columns:
-        panel["outcome_ppd"] = panel["QUO219"].combine_first(panel["QUO74"])
-    elif "QUO219" in panel.columns:
-        panel["outcome_ppd"] = panel["QUO219"]
-    elif "QUO74" in panel.columns:
-        panel["outcome_ppd"] = panel["QUO74"]
-    else:
-        print("FATAL: No PPD outcome columns found.")
-        sys.exit(1)
-
-    # Track which era each PPD value comes from
-    panel["ppd_era"] = np.where(
-        panel["QUO219"].notna(), "2009-2011",
-        np.where(panel["QUO74"].notna(), "2004-2008", "none")
-    )
-
-    # Build SE for outcome for precision weighting
-    if "QUO74" in se_panel.columns and "QUO219" in se_panel.columns:
-        se_panel["se_ppd"] = se_panel["QUO219"].combine_first(se_panel["QUO74"])
-    elif "QUO219" in se_panel.columns:
-        se_panel["se_ppd"] = se_panel["QUO219"]
-    elif "QUO74" in se_panel.columns:
-        se_panel["se_ppd"] = se_panel["QUO74"]
-
-    # Merge SE into panel
-    panel = panel.merge(
-        se_panel[["location_abbr", "year", "se_ppd"]],
-        on=["location_abbr", "year"],
-        how="left",
-    )
+    print("\n=== PHASE 0: DATA LOADING ===")
+    panel_hash = sha256_file(panel_path)
+    panel = pd.read_csv(panel_path, low_memory=False)
+    print(f"  Panel: {len(panel)} state-year rows × {panel.shape[1]} columns")
+    print(f"  SHA-256: {panel_hash[:16]}...")
+    print(f"  Note: Panel was pre-built from full PRAMStat master dataset")
+    print(f"        (6.4M rows filtered to unstratified YES-response pivoted wide)")
+    print(f"  SE data: PRAMStat does not provide standard errors for unstratified")
+    print(f"           estimates. Precision weighting is not available for this data.")
+    print(f"           This is noted as a limitation.")
 
     # Working sample: rows with PPD outcome
     ppd_panel = panel[panel["outcome_ppd"].notna()].copy()
@@ -450,24 +398,31 @@ def main():
     print(f"  PPD panel: {len(ppd_panel)} rows with outcome")
     print(f"    Era breakdown: {ppd_panel['ppd_era'].value_counts().to_dict()}")
 
-    # Build question dictionary
-    qdict_rows = []
-    for qid in sorted(sub["question_id"].unique()):
-        q_sub = sub[sub["question_id"] == qid]
-        qtext = q_sub["question"].iloc[0] if "question" in q_sub.columns else ""
-        years_avail = sorted(q_sub["year"].unique())
-        n_obs = int(panel[qid].notna().sum()) if qid in panel.columns else 0
-        qdict_rows.append({
-            "question_id": qid,
-            "question_text": str(qtext)[:200],
-            "years_available": f"{min(years_avail)}-{max(years_avail)}",
-            "n_state_years_in_panel": n_obs,
-            "in_pcha_set": qid in PCHA_ALL,
-            "in_risk_anchor_set": qid in RISK_ANCHORS,
-            "in_structural_access_set": qid in STRUCTURAL_ACCESS,
-            "in_counseling_set": qid in COUNSELING_INDICATORS,
-        })
-    qdict_df = pd.DataFrame(qdict_rows)
+    # Build / augment question dictionary
+    qdict_path = Path(args.qdict)
+    if qdict_path.exists():
+        qdict_df = pd.read_csv(qdict_path)
+        # Add role flags
+        qdict_df["in_pcha_set"] = qdict_df["question_id"].isin(PCHA_ALL)
+        qdict_df["in_risk_anchor_set"] = qdict_df["question_id"].isin(RISK_ANCHORS)
+        qdict_df["in_structural_access_set"] = qdict_df["question_id"].isin(STRUCTURAL_ACCESS)
+        qdict_df["in_counseling_set"] = qdict_df["question_id"].isin(COUNSELING_INDICATORS)
+    else:
+        # Build from panel columns
+        qdict_rows = []
+        qid_cols = [c for c in panel.columns if c.startswith("QUO")]
+        for qid in sorted(qid_cols):
+            n_obs = int(panel[qid].notna().sum())
+            qdict_rows.append({
+                "question_id": qid,
+                "question_text": "",
+                "n_state_years_in_panel": n_obs,
+                "in_pcha_set": qid in PCHA_ALL,
+                "in_risk_anchor_set": qid in RISK_ANCHORS,
+                "in_structural_access_set": qid in STRUCTURAL_ACCESS,
+                "in_counseling_set": qid in COUNSELING_INDICATORS,
+            })
+        qdict_df = pd.DataFrame(qdict_rows)
     qdict_df.to_csv(out_dir / "variable_dictionary.csv", index=False)
     print(f"  Variable dictionary: {len(qdict_df)} entries saved")
 
@@ -477,10 +432,8 @@ def main():
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "python_version": sys.version,
         "platform": platform.platform(),
-        "master_path": str(master_path),
-        "master_sha256": master_hash,
-        "master_rows": int(df.shape[0]),
-        "master_cols": int(df.shape[1]),
+        "panel_path": str(panel_path),
+        "panel_sha256": panel_hash,
         "panel_rows": int(len(panel)),
         "panel_indicator_cols": int(panel.shape[1] - 2),
         "ppd_panel_rows": int(len(ppd_panel)),
@@ -728,11 +681,15 @@ def main():
         )
 
         # Model 6: Precision-weighted (if SE available)
-        se_vals = work["se_ppd"].values
-        has_se = np.all(np.isfinite(se_vals)) and np.all(se_vals > 0)
+        # Note: PRAMStat does not provide SEs for unstratified estimates.
+        # This remains as infrastructure for future datasets that include SEs.
+        has_se = ("se_ppd" in work.columns and
+                  work["se_ppd"].notna().all() and
+                  (work["se_ppd"] > 0).all())
         if has_se:
+            se_vals = work["se_ppd"].values
             weights = 1.0 / (se_vals ** 2)
-            weights = weights / weights.mean()  # normalize
+            weights = weights / weights.mean()
             m_wls = fit_ols(y, [risk_z, pcha_z, interaction],
                             col_names=["risk_z", "pcha_z", "risk_z_x_pcha_z"],
                             weights=weights)
@@ -1495,12 +1452,11 @@ def main():
         f"**Run ID**: {run_id}",
         f"**Timestamp**: {datetime.now(timezone.utc).isoformat()}",
         f"**Random Seed**: {seed}",
-        f"**Master Data SHA-256**: {master_hash[:16]}...",
+        f"**Panel SHA-256**: {panel_hash[:16]}...",
         f"",
         f"## Data",
-        f"- Master dataset: {master_path}",
-        f"- Total rows in master: {len(df):,}",
-        f"- Panel: {len(panel)} state-year rows × {panel.shape[1]-2} indicators",
+        f"- Panel source: {panel_path}",
+        f"- Panel: {len(panel)} state-year rows × {panel.shape[1]} columns",
         f"- PPD panel: {len(ppd_panel)} rows with outcome",
         f"- Era breakdown: {ppd_panel['ppd_era'].value_counts().to_dict()}",
         f"",
