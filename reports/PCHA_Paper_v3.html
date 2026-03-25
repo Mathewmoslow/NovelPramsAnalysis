@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Conception Health Engagement as a Novel Ecological Moderator of Partner Stress and Postpartum Depression</title>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #666;
+    font-family: 'Garamond', 'EB Garamond', 'Times New Roman', Georgia, serif;
+    font-size: 12pt;
+    line-height: 2;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== PAGE CONTAINER ===== */
+.page {
+    width: 8.5in;
+    margin: 0.5in auto;
+    padding: 1in;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: visible;
+    break-after: auto;
+    page-break-after: auto;
+}
+
+/* only use this on pages that must end */
+.page.force-break {
+    break-after: page;
+    page-break-after: always;
+}
+
+.page::before {
+    content: "PRECONCEPTION HEALTH ENGAGEMENT AND POSTPARTUM DEPRESSION";
+    position: absolute;
+    top: 0.5in;
+    left: 1in;
+    font-size: 12pt;
+    font-family: 'Garamond', 'EB Garamond', 'Times New Roman', Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.page-number {
+    position: absolute;
+    top: 0.5in;
+    right: 1in;
+    font-size: 12pt;
+    font-family: 'Garamond', 'EB Garamond', 'Times New Roman', Georgia, serif;
+}
+
+/* ===== TITLE PAGE ===== */
+.page.title-sheet {
+    display: flex;
+    flex-direction: column;
+    min-height: 9in;
+}
+
+.page.title-sheet::before {
+    display: none;
+}
+
+.title-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.2in;
+}
+
+.title-page .title {
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: 2;
+    max-width: 5.5in;
+    margin-bottom: 0.4in;
+}
+
+.title-page .author,
+.title-page .affiliation,
+.title-page .course-info {
+    font-size: 12pt;
+    line-height: 1.8;
+}
+
+.author-note {
+    margin-top: auto;
+    text-align: justify;
+    text-align-last: left;
+    font-size: 10pt;
+    line-height: 1.3;
+    hyphens: manual;
+}
+
+.author-note p {
+    text-indent: 0;
+    margin: 0 0 4pt 0;
+}
+
+.author-note .author-note-heading {
+    font-weight: bold;
+    text-indent: 0;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: left;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 0;
+}
+
+h4 {
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 0.5in;
+}
+
+/* ===== BODY TEXT ===== */
+p {
+    text-indent: 0.5in;
+    margin: 0;
+    line-height: 2;
+    text-align: left;
+}
+
+p.no-indent {
+    text-indent: 0;
+}
+
+.abstract-text {
+    text-indent: 0.5in;
+    margin: 0;
+    line-height: 2;
+}
+
+.keywords {
+    text-indent: 0.5in;
+    font-style: italic;
+    margin: 0;
+    line-height: 2;
+}
+
+.keywords span {
+    font-style: normal;
+}
+
+/* ===== TABLES ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 10pt;
+    line-height: 1.5;
+}
+
+table caption {
+    text-align: left;
+    font-style: italic;
+    font-size: 12pt;
+    line-height: 2;
+    caption-side: top;
+    margin-bottom: 4pt;
+}
+
+table .table-number {
+    font-weight: bold;
+    font-style: normal;
+    display: block;
+    line-height: 2;
+}
+
+thead {
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+tbody {
+    border-bottom: 2px solid #000;
+}
+
+th {
+    font-weight: bold;
+    text-align: center;
+    padding: 4pt 6pt;
+    vertical-align: bottom;
+}
+
+th:first-child {
+    text-align: left;
+}
+
+td {
+    text-align: center;
+    padding: 3pt 6pt;
+    vertical-align: top;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+.table-note {
+    font-size: 10pt;
+    line-height: 1.8;
+    text-indent: 0;
+    margin-top: 4pt;
+}
+
+.table-note em {
+    font-style: italic;
+}
+
+/* ===== FIGURES ===== */
+.figure-container {
+    margin: 12pt 0;
+    text-align: center;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.figure-container img {
+    max-width: 100%;
+    max-height: 6in;
+    display: block;
+    margin: 8pt auto;
+}
+
+.figure-label {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 12pt;
+    text-align: left;
+    line-height: 2;
+    text-indent: 0;
+}
+
+.figure-title {
+    font-style: italic;
+    font-size: 12pt;
+    text-align: left;
+    line-height: 2;
+    text-indent: 0;
+    margin-bottom: 4pt;
+}
+
+.figure-note {
+    font-size: 10pt;
+    text-align: left;
+    line-height: 1.8;
+    text-indent: 0;
+    margin-top: 4pt;
+}
+
+/* ===== REFERENCES ===== */
+.references p {
+    text-indent: -0.5in;
+    padding-left: 0.5in;
+    margin: 0;
+    line-height: 2;
+}
+
+/* ===== DAG ===== */
+.dag-container {
+    margin: 20pt auto;
+    max-width: 5in;
+    position: relative;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.dag-box {
+    border: 1.5px solid #000;
+    padding: 6pt 14pt;
+    text-align: center;
+    font-size: 11pt;
+    font-weight: bold;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+}
+
+.dag-svg {
+    width: 100%;
+    height: 320px;
+}
+
+/* ===== PRINT STYLES ===== */
+@page {
+    size: letter;
+    margin: 1in 1in 1in 1in;
+}
+
+@media print {
+    body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        position: static;
+        overflow: visible;
+        break-after: auto;
+        page-break-after: auto;
+    }
+
+    .page.force-break {
+        break-after: page;
+        page-break-after: always;
+    }
+
+    .page-number {
+        display: none;
+    }
+
+    .page::before {
+        display: none;
+        content: none;
+    }
+
+    .figure-container,
+    table,
+    .dag-container {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3, h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+}
+
+/* Utility */
+.center { text-align: center; }
+.bold { font-weight: bold; }
+sup { font-size: 0.7em; vertical-align: super; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- TITLE PAGE -->
+<!-- ============================================================ -->
+<div class="page title-sheet force-break">
+    <div class="title-page">
+        <div class="title">
+            An Ecological Analysis of Preconception Health Engagement as a Moderator of Partner-Related Stress and Postpartum Depression Using PRAMStat State-Level Data, 2000&ndash;2011
+        </div>
+        <div class="author">Mathew Moslow</div>
+        <div class="affiliation">AdventHealth University, Orlando</div>
+        <div class="course-info">Independent Study</div>
+        <div class="course-info">March 24, 2026</div>
+    </div>
+    <div class="author-note">
+        <p class="author-note-heading">Author Note</p>
+        <p>This paper represents an independent scholarly work conducted by the author as an undergraduate student nurse. It does not represent the official views, policies, or positions of AdventHealth University, its faculty, or its affiliates. This study used publicly available aggregate data from the Centers for Disease Control and Prevention Pregnancy Risk Assessment Monitoring System statistical database (PRAMStat). The author gratefully acknowledges the CDC and the state and territorial health departments participating in PRAMS for collecting and making these data publicly available. Use of PRAMStat data is consistent with CDC public data access policies. This study received no external funding. The author has no conflicts of interest to disclose. No financial relationships, institutional affiliations, or personal interests influenced the design, analysis, interpretation, or reporting of this work. Correspondence concerning this paper should be addressed to Mathew Moslow, AdventHealth University.</p>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ABSTRACT PAGE -->
+<!-- ============================================================ -->
+<div class="page force-break">
+    <h1>Abstract</h1>
+    <p class="abstract-text">
+        Partner stress is consistently identified as one of the strongest modifiable risk factors for postpartum depression (PPD), yet what reduces its impact at the population level remains largely unknown. This study introduces Pre-Conception Health Engagement (PCHE), a composite measure of how actively women in a given state pursue health-promoting behaviors before and around the time of conception, and tests whether PCHE weakens the link between partner stress and PPD across states. Using publicly available CDC surveillance data (PRAMStat) from 2000 to 2011, covering 188 state-year observations across 40 U.S. jurisdictions, we built a 12-component PCHE score drawing on behaviors such as pre-pregnancy exercise, vitamin use, dental care, pregnancy planning, and early prenatal care. The measure demonstrated strong internal reliability (Cronbach&rsquo;s &alpha; = .87) and statistical cohesion. States with higher PCHE scores showed a meaningfully weaker relationship between partner stress and PPD (interaction &beta; = &minus;0.38 to &minus;0.39, p = .001), and this protective pattern held even when the index was limited to behaviors that occur strictly before pregnancy (&beta; = &minus;0.39), addressing concerns about whether cause preceded effect. The finding was stable across individual states and time periods. In contrast, prenatal counseling intensity showed the opposite pattern, states with more counseling had a stronger partner-stress-to-PPD link, suggesting that downstream clinical response may reflect recognized risk rather than reduce it. These findings indicate that investments in health engagement before pregnancy, rather than counseling after pregnancy begins, may represent a more powerful lever for reducing the population-level burden of postpartum depression.
+    </p>
+    <p class="keywords"><em>Keywords:</em> <span>postpartum depression, pre-conception health, ecological analysis, partner stress, PRAMS, moderation</span></p>
+</div>
+
+<!-- ============================================================ -->
+<!-- BODY: ALL REMAINING CONTENT IN ONE CONTINUOUS DIV -->
+<!-- ============================================================ -->
+<div class="page">
+
+    <h1>Pre-Conception Health Engagement as a Novel Ecological Moderator of Partner Stress and Postpartum Depression: Evidence From PRAMStat State-Level Data, 2000&ndash;2011</h1>
+
+    <p>
+        Postpartum depression is among the most common and consequential complications of childbirth. Affecting approximately 13% of women in the months following delivery, PPD exacts a devastating toll on maternal well-being, infant development, family functioning, and public health systems (Bauman et al., 2020). Luca and colleagues (2020) estimated that untreated perinatal mood and anxiety disorders cost the United States $14.2 billion annually among 2017 births alone, a figure that encompasses direct health care expenditures, productivity losses, and the long-term developmental costs borne by children of affected mothers. Despite decades of research identifying risk factors and developing interventions, PPD prevalence has remained stubbornly stable, suggesting that the field&rsquo;s dominant approach&mdash;identifying at-risk individuals and intervening during or after pregnancy&mdash;may be insufficient to shift population-level outcomes.
+    </p>
+    <p>
+        Among the constellation of risk factors linked to PPD, relationship distress and partner-related stress have emerged as consistently among the strongest and most robust predictors. Beck&rsquo;s (2001) foundational meta-analysis identified poor marital relationship quality as a significant predictor of postpartum depression, and Robertson and colleagues (2004) confirmed this in their synthesis of antenatal risk factors, finding that marital difficulties and lack of partner support ranked among the largest effect sizes in the literature. More recent evidence has only strengthened this conclusion. Gastaldon et al. (2022), in a comprehensive umbrella review synthesizing decades of meta-analytic evidence, identified partner-related stressors as a leading risk domain, with intimate partner violence and relationship conflict demonstrating particularly strong associations with postpartum depressive symptomatology. A recent 2025 meta-analysis reported a pooled relative risk of 3.47 for PPD among women experiencing significant partner stress, placing it among the highest-magnitude modifiable risk factors in the perinatal literature. At the state level, Qobadi and Collier (2016) analyzed Mississippi PRAMS data and found that partner-related stressors were associated with odds ratios ranging from 5.9 to 8.6 for PPD, depending on the specific type of stressor, eclipsing the effect sizes of financial hardship, housing instability, and other commonly studied psychosocial risks.
+    </p>
+    <p>
+        The dominance of partner stress as a PPD risk factor raises a critical question: If partner stress is the most potent modifiable predictor, what&mdash;if anything&mdash;moderates its impact? That is, are there contexts, conditions, or behavioral patterns that attenuate the link between partner stress and depression after childbirth? Surprisingly, this question has received almost no systematic attention in the literature. The vast majority of research on PPD protective factors has examined individual-level behaviors in isolation from one another and without consideration of their potential moderating role. Physical exercise during pregnancy has been associated with reduced depressive symptoms through anti-inflammatory pathways and hypothalamic-pituitary-adrenal axis regulation (Lancaster et al., 2010). Multivitamin and folate supplementation before and during pregnancy have demonstrated modest protective associations in several cohort studies. Planned pregnancies are consistently linked to lower PPD risk compared with unintended pregnancies, with Abbasi and colleagues (2013) documenting significantly elevated depression among women with unwanted pregnancies. Early initiation of prenatal care facilitates screening, psychoeducation, and the development of therapeutic alliance with providers. Dental care utilization, while rarely studied in the PPD context, serves as a behavioral marker of health engagement and preventive orientation.
+    </p>
+    <p>
+        Yet none of these factors has been studied as a component of an integrated preconception health profile, and none has been examined as a moderator of partner stress. This is a remarkable gap. If a woman who exercises regularly, takes prenatal vitamins, plans her pregnancy, and engages early with the health care system experiences partner stress, does she fare differently than a woman who does none of these things? The question is intuitive, clinically important, and entirely unanswered.
+    </p>
+    <p>
+        A related body of evidence underscores the preconception origins of perinatal mental health vulnerability. Patton and colleagues (2015) followed a community cohort prospectively from adolescence through childbearing and found that 81% of women who experienced perinatal depression had documented mental health difficulties before conception. Thomson et al. (2020), drawing on the same Victorian Intergenerational Health Cohort Study (VIHCS), extended these findings to show that 87% of perinatal depressive episodes had identifiable antecedents in the preconception period, with health behaviors and psychosocial functioning in the years before pregnancy powerfully predicting postpartum outcomes. These findings suggest that the roots of PPD extend far upstream of pregnancy itself, and that interventions confined to the prenatal or postpartum periods may arrive too late to meaningfully alter trajectories that were established months or years before conception.
+    </p>
+    <p>
+        Despite the strength of this evidence base, a striking methodological gap persists. Virtually all published research on PPD using Pregnancy Risk Assessment Monitoring System (PRAMS) data has relied on individual-level microdata, analyzing the characteristics of individual respondents within single states or across pooled individual records. This is the natural and appropriate approach for most research questions. However, it leaves entirely unexplored the ecological dimension of PPD risk&mdash;the degree to which state-level contextual factors shape population-level depression outcomes. The CDC&rsquo;s PRAMStat system, which publishes aggregate prevalence estimates for hundreds of maternal and infant health indicators across participating states and years, offers a unique opportunity to examine these ecological patterns. To our knowledge, no published study has used PRAMStat aggregate data to study postpartum depression, and no study has examined ecological moderation of any PPD risk factor. As Campos et al. (2021) observed in their review, &ldquo;a combined analysis of indicators involved in postpartum depression is surprisingly non-existent&rdquo; (p. 3), a gap that is especially conspicuous given the growing emphasis on social determinants and structural factors in maternal health research.
+    </p>
+    <p>
+        The closest precedent in the ecological PPD literature is the work of Dadi et al. (2020), who examined cross-national associations between structural indicators and antenatal depression outcomes, finding that country-level economic inequality was associated with elevated perinatal depression prevalence. However, Dadi and colleagues did not test moderation, did not construct theory-driven composite indices, and focused on antenatal rather than postpartum depression. No study has tested whether state-level behavioral health profiles moderate the association between state-level risk exposures and state-level PPD outcomes.
+    </p>
+    <p>
+        The present study aims to address these gaps through four contributions that, in combination, represent a fundamentally novel approach to understanding PPD at the population level. First, we adopt the state-year as the unit of analysis, leveraging PRAMStat aggregate data to examine ecological patterns that are invisible in individual-level research. This ecological approach captures contextual and policy-related influences&mdash;the health infrastructure, cultural norms, and programmatic environments that characterize entire states&mdash;that cannot be decomposed from individual-level data alone. Second, we construct a theory-driven composite index, Pre-Conception Health Engagement (PCHE), that integrates multiple behavioral indicators into a single measure of the degree to which women in a given state engage in health-promoting behaviors before and around conception. Third, we test whether PCHE moderates the ecological association between partner stress and PPD, asking whether the population-level impact of partner stress on PPD is attenuated in states where women exhibit higher levels of preconception health engagement. Fourth, we subject this moderation hypothesis to a comprehensive battery of robustness checks, including fixed-effects models that control for all time-invariant state characteristics, cluster-robust standard errors, permutation tests, bootstrap confidence intervals, leave-one-state-out and leave-one-component-out sensitivity analyses, discriminant validity tests against structural access, and strict pre-conception variants that exclude all postpartum-period components to address temporal ordering.
+    </p>
+    <p>
+        Our specific research questions are as follows: (1) Can preconception health engagement be reliably measured as a composite construct at the ecological level? (2) Does PCHE moderate the association between partner stress and PPD across state-year observations? (3) Is PCHE&rsquo;s moderating effect distinct from structural access to health care? (4) Does the moderating effect survive when analysis is restricted to strictly pre-conception components, thereby addressing temporal ordering concerns? We hypothesized that PCHE would demonstrate adequate internal consistency, that it would significantly moderate the partner-stress-to-PPD association (with higher PCHE attenuating the relationship), that this effect would be distinguishable from structural access, and that it would be robust to the exclusion of components measured during or after pregnancy.
+    </p>
+    <p>
+        In pursuing these questions, we deliberately choose to work at the ecological level&mdash;not because we believe ecological data are superior to individual-level data, but because they capture something different. When we observe that states with higher PCHE have a weaker partner-stress-to-PPD association, we are observing a contextual pattern that reflects the cumulative influence of health infrastructure, public health programming, cultural norms around health engagement, and the myriad policies and practices that shape women&rsquo;s preconception health behaviors. These contextual influences are precisely what individual-level studies cannot capture, because they operate at a level above the individual. At the same time, ecological analyses cannot support individual-level causal inference, and we maintain this distinction throughout. What follows is, to our knowledge, the first ecological moderation analysis of postpartum depression and the first attempt to construct and validate a composite preconception health engagement index at the state-year level.
+    </p>
+
+    <h2>Method</h2>
+    <h3>Data Source</h3>
+    <p>
+        Data were drawn from the Centers for Disease Control and Prevention&rsquo;s Pregnancy Risk Assessment Monitoring System aggregate database (PRAMStat), which publishes state-level prevalence estimates for maternal and infant health indicators derived from the PRAMS survey. PRAMS is an ongoing, state-specific, population-based surveillance system that collects data on maternal attitudes, experiences, and behaviors before, during, and after pregnancy. Each participating state surveys a stratified random sample of women who have recently given birth, with response rates typically exceeding 65%. PRAMStat aggregates these individual responses into state-year prevalence estimates for each survey indicator, providing a publicly accessible panel of maternal health indicators across states and years.
+    </p>
+    <p>
+        Our analytic dataset was constructed from 6.4 million raw rows in the PRAMStat system, spanning the years 2000 through 2011, encompassing 40 participating jurisdictions (states and territories) and 229 unique indicators. After data cleaning and harmonization, the full panel comprised 329 state-year observations. The analytic sample varied across models depending on indicator availability, with the primary interaction analyses using 188 state-year observations for which both the harmonized PPD outcome and the PCHE index could be computed. All data are publicly available through the CDC PRAMStat website, and all analytic code is available at https://github.com/Mathewmoslow/NovelPramsAnalysis.
+    </p>
+    <h3>Outcome Variable: Postpartum Depressive Symptoms</h3>
+    <p>
+        The outcome variable was the state-year prevalence of self-reported postpartum depressive symptoms, harmonized across two PRAMS questionnaire items that were administered in different survey eras. QUO74, used from 2004 through 2008, assessed whether the respondent experienced depressive symptoms since delivery. QUO219, introduced in the revised 2009 questionnaire and used from 2009 through 2011, assessed a comparable construct using updated item wording. Both items capture self-reported postpartum depressive symptomatology, and both yield state-year prevalence estimates expressed as percentages. We harmonized these items into a single outcome variable, yielding 188 state-year observations with non-missing PPD data. The harmonized PPD variable had a mean of 13.0% (SD = 3.0%), with values ranging from 6.9% to 27.6%.
+    </p>
+
+    <!-- TABLE O1 -->
+    <table>
+        <caption>
+            <span class="table-number">Table O1</span>
+            Postpartum Depression Outcome Measures
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">Variable</th>
+                <th>Era</th>
+                <th><em>n</em></th>
+                <th><em>M</em> (%)</th>
+                <th><em>SD</em> (%)</th>
+                <th>Range (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">QUO74 (depressive symptoms since delivery)</td>
+                <td>2004&ndash;2008</td>
+                <td>102</td>
+                <td>13.0</td>
+                <td>3.0</td>
+                <td>6.9&ndash;27.6</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO219 (depressive symptoms since delivery, revised)</td>
+                <td>2009&ndash;2011</td>
+                <td>86</td>
+                <td>13.0</td>
+                <td>3.0</td>
+                <td>6.9&ndash;27.6</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Harmonized PPD (QUO74 + QUO219)</td>
+                <td>2004&ndash;2011</td>
+                <td>188</td>
+                <td>13.0</td>
+                <td>3.0</td>
+                <td>6.9&ndash;27.6</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> QUO219 takes precedence where both items are available for a state-year. All values are state-year prevalence estimates expressed as percentages.</p>
+
+    <h3>Risk Anchor Variables: Partner Stress</h3>
+    <p>
+        Partner stress was operationalized using two primary indicators from the PRAMS survey. QUO197 assessed the prevalence of women reporting that their partner argued with them more than usual during the 12 months before delivery (M = 24.4%, SD = 3.4%, n = 188). QUO210 assessed the prevalence of women reporting any partner-related stressor during the same period (M = 29.5%, SD = 3.8%, n = 188). These two indicators were very highly correlated at the state-year level (r = .96), reflecting the substantial overlap in their constituent items but also providing partially independent tests of the partner stress construct. As secondary risk anchors, we examined QUO313 (prevalence of physical intimate partner violence, n = 111) and QUO315 (prevalence of any intimate partner violence, n = 111), which were available for a more restricted set of state-year observations due to later introduction of these items.
+    </p>
+
+    <!-- TABLE O2 -->
+    <table>
+        <caption>
+            <span class="table-number">Table O2</span>
+            Partner Stress Variables
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">Variable</th>
+                <th>Description</th>
+                <th><em>n</em></th>
+                <th><em>M</em> (%)</th>
+                <th><em>SD</em> (%)</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">QUO197</td>
+                <td>Partner argued more than usual, 12 months before delivery</td>
+                <td>188</td>
+                <td>24.4</td>
+                <td>3.4</td>
+                <td>Primary</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO210</td>
+                <td>Any partner-related stressor, 12 months before delivery</td>
+                <td>188</td>
+                <td>29.5</td>
+                <td>3.8</td>
+                <td>Primary</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO313</td>
+                <td>Physical intimate partner violence</td>
+                <td>111</td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+                <td>Secondary</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO315</td>
+                <td>Any intimate partner violence</td>
+                <td>111</td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+                <td>Secondary</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> QUO197 and QUO210 are correlated at <em>r</em> = .96. QUO313 and QUO315 were available for a restricted subset of state-year observations due to later introduction.</p>
+
+    <h3>Pre-Conception Health Engagement (PCHE) Index Construction</h3>
+    <p>
+        The PCHE index was constructed to capture the degree to which women in a given state engaged in health-promoting behaviors before and around conception. Twelve component indicators were selected based on theoretical relevance to preconception health engagement, organized into three domains.
+    </p>
+    <h4>Preconception Health Behaviors</h4>
+    <p>
+        Five indicators assessed health behaviors engaged in before or around the time of conception. QUO179 measured the prevalence of women who exercised at least three times per week in the three months before pregnancy (M = 44.1%). QUO41 measured the prevalence of women who took a multivitamin or prenatal vitamin in the month before pregnancy (M = 37.4%). QUO65 measured the prevalence of women who took a multivitamin or prenatal vitamin at least four times per week in the month before pregnancy (M = 31.0%). QUO249 measured the prevalence of women who had their teeth cleaned by a dentist or dental hygienist during the 12 months before pregnancy (M = 54.8%). QUO75 measured the prevalence of women who had a health care visit in the 12 months before pregnancy at which a health care worker discussed preparing for a healthy pregnancy (M = 40.9%).
+    </p>
+    <h4>Pregnancy Intentionality</h4>
+    <p>
+        One indicator captured pregnancy planning. QUO257 measured the prevalence of women who reported that their pregnancy was intended (M = 49.8%).
+    </p>
+    <h4>Early Engagement With Prenatal Care</h4>
+    <p>
+        Six indicators assessed the timing and initiation of prenatal care. QUO296 measured the prevalence of women who initiated prenatal care in the first trimester (M = 83.7%). QUO297 measured the prevalence of women whose prenatal care began by the recommended gestational age (M = 84.4%). QUO4 measured the prevalence of women who received prenatal care as early as they wanted (M = 68.8%). QUO5 measured the prevalence of women who received first-trimester prenatal care (M = 81.4%). QUO44 measured the prevalence of women who had a preconception health visit (M = 59.0%). QUO101 measured the prevalence of women who received any prenatal care (M = 90.9%).
+    </p>
+
+    <!-- TABLE O3 -->
+    <table>
+        <caption>
+            <span class="table-number">Table O3</span>
+            PCHE Index Components: Variable Reference Guide
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">Domain</th>
+                <th style="text-align:left;">Code</th>
+                <th style="text-align:left;">Description</th>
+                <th><em>n</em></th>
+                <th><em>M</em> (%)</th>
+                <th>Variant</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">Preconception Health Behaviors</td>
+                <td style="text-align:left;">QUO179</td>
+                <td style="text-align:left;">Exercised 3+ times/week in 3 months before pregnancy</td>
+                <td>86</td>
+                <td>44.1</td>
+                <td>Full, Strict, Narrow</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Preconception Health Behaviors</td>
+                <td style="text-align:left;">QUO41</td>
+                <td style="text-align:left;">Took multivitamin/prenatal vitamin in month before pregnancy</td>
+                <td>188</td>
+                <td>37.4</td>
+                <td>Full, Strict, Narrow</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Preconception Health Behaviors</td>
+                <td style="text-align:left;">QUO65</td>
+                <td style="text-align:left;">Took multivitamin 4+ times/week in month before pregnancy</td>
+                <td>188</td>
+                <td>31.0</td>
+                <td>Full, Strict, Narrow</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Preconception Health Behaviors</td>
+                <td style="text-align:left;">QUO249</td>
+                <td style="text-align:left;">Teeth cleaned by dentist in 12 months before pregnancy</td>
+                <td>86</td>
+                <td>54.8</td>
+                <td>Full, Strict, Narrow</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Preconception Health Behaviors</td>
+                <td style="text-align:left;">QUO75</td>
+                <td style="text-align:left;">Health care visit discussing preparing for healthy pregnancy</td>
+                <td>95</td>
+                <td>40.9</td>
+                <td>Full, Strict, Narrow</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Pregnancy Intentionality</td>
+                <td style="text-align:left;">QUO257</td>
+                <td style="text-align:left;">Pregnancy was intended</td>
+                <td>188</td>
+                <td>49.8</td>
+                <td>Full, Strict</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Early Engagement With Prenatal Care</td>
+                <td style="text-align:left;">QUO296</td>
+                <td style="text-align:left;">Initiated prenatal care in first trimester</td>
+                <td>102</td>
+                <td>83.7</td>
+                <td>Full, Strict</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Early Engagement With Prenatal Care</td>
+                <td style="text-align:left;">QUO297</td>
+                <td style="text-align:left;">Prenatal care began by recommended gestational age</td>
+                <td>86</td>
+                <td>84.4</td>
+                <td>Full, Strict</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Early Engagement With Prenatal Care</td>
+                <td style="text-align:left;">QUO4</td>
+                <td style="text-align:left;">Received prenatal care as early as wanted</td>
+                <td>188</td>
+                <td>68.8</td>
+                <td>Full</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Early Engagement With Prenatal Care</td>
+                <td style="text-align:left;">QUO5</td>
+                <td style="text-align:left;">Received first-trimester prenatal care</td>
+                <td>188</td>
+                <td>81.4</td>
+                <td>Full</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Early Engagement With Prenatal Care</td>
+                <td style="text-align:left;">QUO44</td>
+                <td style="text-align:left;">Had a preconception health visit</td>
+                <td>188</td>
+                <td>59.0</td>
+                <td>Full</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Early Engagement With Prenatal Care</td>
+                <td style="text-align:left;">QUO101</td>
+                <td style="text-align:left;">Received any prenatal care</td>
+                <td>188</td>
+                <td>90.9</td>
+                <td>Full</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> Full = all 12 components; Strict = 8 components excluding postpartum-period items (QUO4, QUO5, QUO44, QUO101); Narrow = 5 components measured strictly before pregnancy (QUO179, QUO41, QUO65, QUO249, QUO75). <em>n</em> = number of state-year observations with non-missing data for each component. <em>M</em> = mean state-year prevalence.</p>
+
+    <p>
+        To construct the composite PCHE index, each component indicator was standardized (z-scored) within the panel, and the PCHE score for each state-year was computed as the mean of all available z-scored components, requiring a minimum of three non-missing components. This approach accommodated the heterogeneous coverage of PRAMS indicators across states and years while ensuring that each state-year&rsquo;s PCHE score reflected a meaningful aggregate of preconception health behaviors.
+    </p>
+    <h4>Internal Consistency and Factor Structure</h4>
+    <p>
+        Internal consistency of the PCHE index was assessed using Cronbach&rsquo;s alpha (Cronbach, 1951). Because coverage heterogeneity precluded computing alpha for all 12 components simultaneously (different indicators were available for different subsets of state-years), we computed alpha for the seven-component subset with full coverage across all 188 primary analytic observations, yielding alpha = .871. A narrow five-component pre-pregnancy subset (excluding all early engagement indicators) yielded alpha = .936 among the 86 state-year observations with complete data on all five components. These values indicate strong internal consistency and support the treatment of PCHE as a unitary construct.
+    </p>
+    <p>
+        Factor structure was examined using parallel analysis (Horn, 1965), which compares observed eigenvalues with eigenvalues from randomly generated data of the same dimensions. Parallel analysis indicated two factors with eigenvalues exceeding the random threshold, though the first principal component was clearly dominant, with an eigenvalue of 4.41 explaining 63% of the total variance (see Figure 5). This pattern is consistent with a single strong general factor accompanied by a minor secondary dimension, supporting the use of a single composite score while acknowledging some internal heterogeneity.
+    </p>
+    <h3>Comparison Indices</h3>
+    <p>
+        To establish discriminant validity, two comparison indices were constructed using the same z-score-and-average methodology. The Structural Access Index comprised eight insurance-related indicators capturing the availability of health insurance coverage before, during, and after pregnancy (e.g., Medicaid coverage, private insurance coverage, any insurance coverage at various timepoints). This index correlated r = .606 with PCHE, reflecting shared variance related to health system engagement but also substantial unique variance. The Counseling Intensity Index comprised nine indicators measuring the prevalence of various prenatal counseling topics discussed during prenatal care visits (e.g., counseling about breastfeeding, physical activity, smoking cessation, emotional changes). This index correlated r = -.128 with PCHE, indicating near-independence between preconception behavioral engagement and the intensity of counseling received during prenatal care.
+    </p>
+    <h3>Statistical Approach</h3>
+    <p>
+        All analyses were conducted at the state-year level. The core analytic model was an ordinary least squares regression of the form:
+    </p>
+    <p class="no-indent" style="text-align: center; font-style: italic; margin: 6pt 0;">
+        PPD = b<sub>0</sub> + b<sub>1</sub>(Risk<sub>z</sub>) + b<sub>2</sub>(PCHE<sub>z</sub>) + b<sub>3</sub>(Risk<sub>z</sub> &times; PCHE<sub>z</sub>) + e
+    </p>
+    <p>
+        where PPD is the state-year postpartum depression prevalence, Risk<sub>z</sub> is the z-scored partner stress indicator, PCHE<sub>z</sub> is the z-scored PCHE composite, and the interaction term Risk<sub>z</sub> &times; PCHE<sub>z</sub> tests the moderation hypothesis. A negative and significant coefficient on b<sub>3</sub> would indicate that higher PCHE attenuates the positive association between partner stress and PPD.
+    </p>
+    <p>
+        This core model was subjected to 11 robustness checks spanning different modeling strategies, inference procedures, and sensitivity analyses. First, a fixed-effects-only baseline model included state dummy variables to absorb all time-invariant between-state differences, establishing the explanatory power of state-level heterogeneity (R&sup2; = .804, adjusted R&sup2; = .748, n = 188, k = 43). Second, fixed-effects interaction models added the risk, PCHE, and interaction terms to the state-fixed-effects specification, testing whether the moderation effect survived after controlling for all stable state characteristics. Third, cluster-robust standard errors (CR1) were computed to account for within-state serial correlation across years.
+    </p>
+    <p>
+        Fourth, permutation tests (5,000 iterations, seed = 42) shuffled the PCHE variable to generate null distributions for the interaction coefficient. Fifth, nonparametric bootstrap confidence intervals (5,000 iterations, seed = 42) estimated the sampling distribution of the interaction coefficient without distributional assumptions. Sixth, a constant-sample specification restricted analysis to observations present across all models to ensure that results were not driven by sample composition differences. Seventh, era-specific models estimated the interaction separately for the 2004&ndash;2008 era (QUO74-based PPD) and the 2009&ndash;2011 era (QUO219-based PPD) to assess consistency across the outcome harmonization boundary.
+    </p>
+    <p>
+        Eighth, leave-one-state-out (LOSO) analyses re-estimated the core model 24 times (once for each state with sufficient data), each time excluding one state, to assess the influence of individual states on the overall result. Ninth, leave-one-component-out (LOCO) analyses re-estimated the core model 24 times, each time reconstructing the PCHE index with one component removed, to assess whether the moderation effect depended on any single component. Tenth, discriminant validity analyses tested whether PCHE&rsquo;s moderating effect could be accounted for by structural access, first by estimating the structural access interaction separately and then by including both PCHE and structural access interactions in a single model. Eleventh, the counseling paradox analysis tested whether counseling intensity exhibited the same moderating pattern as PCHE or a different one. All analyses used a significance threshold of alpha = .05, with Benjamini and Hochberg (1995) false discovery rate correction applied to multiple comparisons across individual components. Variance inflation factors (VIF) were computed for all models to assess multicollinearity, with all values remaining below 3.0 (interaction term VIF = 1.32&ndash;1.35).
+    </p>
+
+    <!-- TABLE M1 -->
+    <table>
+        <caption>
+            <span class="table-number">Table M1</span>
+            Robustness Checks Applied to the Core Interaction Model
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">#</th>
+                <th style="text-align:left;">Check</th>
+                <th style="text-align:left;">Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">1</td>
+                <td style="text-align:left;">Fixed-effects-only baseline</td>
+                <td style="text-align:left;">Establish explanatory power of state-level heterogeneity</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">2</td>
+                <td style="text-align:left;">Fixed-effects interaction models</td>
+                <td style="text-align:left;">Test moderation after controlling for all stable state characteristics</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">3</td>
+                <td style="text-align:left;">Cluster-robust standard errors (CR1)</td>
+                <td style="text-align:left;">Account for within-state serial correlation across years</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">4</td>
+                <td style="text-align:left;">Permutation tests (5,000 iterations)</td>
+                <td style="text-align:left;">Generate null distributions for the interaction coefficient</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">5</td>
+                <td style="text-align:left;">Bootstrap confidence intervals (5,000 iterations)</td>
+                <td style="text-align:left;">Estimate sampling distribution without distributional assumptions</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">6</td>
+                <td style="text-align:left;">Constant-sample specification</td>
+                <td style="text-align:left;">Ensure results are not driven by sample composition differences</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">7</td>
+                <td style="text-align:left;">Era-specific models</td>
+                <td style="text-align:left;">Assess consistency across the outcome harmonization boundary</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">8</td>
+                <td style="text-align:left;">Leave-one-state-out (LOSO)</td>
+                <td style="text-align:left;">Assess influence of individual states on the overall result</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">9</td>
+                <td style="text-align:left;">Leave-one-component-out (LOCO)</td>
+                <td style="text-align:left;">Assess whether moderation depends on any single component</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">10</td>
+                <td style="text-align:left;">Discriminant validity (structural access)</td>
+                <td style="text-align:left;">Test whether PCHE&rsquo;s effect is accounted for by structural access</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">11</td>
+                <td style="text-align:left;">Counseling paradox analysis</td>
+                <td style="text-align:left;">Test whether counseling intensity exhibits the same or different moderating pattern</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> All permutation and bootstrap procedures used seed = 42 for reproducibility. VIF &lt; 3.0 for all model terms across all specifications.</p>
+
+    <h3>Strict Pre-Conception and Narrow Pre-Pregnancy Variants</h3>
+    <p>
+        A critical concern with any composite index that includes postpartum-period components (such as timing of prenatal care initiation, which could be influenced by early pregnancy experiences) is temporal ordering: components measured during pregnancy could be consequences rather than causes of the psychological and relational processes that lead to PPD. To address this concern, we constructed two reduced variants of the PCHE index. The strict pre-conception variant included eight components, excluding all indicators that could only be assessed after pregnancy was confirmed. The narrow pre-pregnancy variant included only the five indicators unambiguously measured before pregnancy: exercise, the two multivitamin indicators, dental visits, and preconception health counseling visits. All primary analyses were repeated with these reduced indices to assess whether the moderating effect was carried by pre-conception components alone.
+    </p>
+    <h3>Within-State Permutation Test</h3>
+    <p>
+        To distinguish between-state from within-state sources of the moderation effect, we conducted within-state permutation tests (5,000 iterations) that shuffled PCHE values only within states across years, preserving the between-state distribution while breaking within-state temporal associations. This test directly addresses whether the moderation effect reflects stable between-state differences in health engagement contexts (as hypothesized) or within-state year-to-year fluctuations.
+    </p>
+    <h3>Ecological Design Statement</h3>
+    <p>
+        We emphasize that this study is ecological in design: all variables are state-year aggregates, and all inferences apply to the state-year level. We cannot determine from these data whether individual women who are more health-engaged before conception are individually protected from the depressive effects of partner stress. What we can determine is whether states characterized by higher levels of preconception health engagement show a weaker aggregate association between partner stress prevalence and PPD prevalence. This ecological perspective captures contextual and policy-related influences&mdash;the programmatic environments, health infrastructure characteristics, and population-level behavioral norms that characterize different states&mdash;that are not reducible to individual-level processes. At the same time, ecological associations are subject to the ecological fallacy, and individual-level confirmation of any patterns observed here would require individual-level prospective data. We maintain this distinction consistently throughout the presentation of results and their interpretation.
+    </p>
+
+    <h2>Results</h2>
+    <h3>Fixed-Effects-Only Baseline</h3>
+    <p>
+        Before introducing the PCHE interaction, we established the baseline explanatory power of state-level heterogeneity. A model regressing PPD prevalence on state fixed effects alone (43 dummy variables) yielded R&sup2; = .804 and adjusted R&sup2; = .748 (n = 188). This indicates that approximately 80% of the variance in state-year PPD prevalence is attributable to stable between-state differences, underscoring both the importance of state-level context and the high bar that any additional predictor must clear to demonstrate incremental value.
+    </p>
+    <h3>PCHE Index Properties</h3>
+    <p>
+        The PCHE index (M = -0.011, SD = 0.726) exhibited strong negative ecological correlations with both PPD prevalence (r = -.710) and the partner stress indicators (r = -.708 with QUO197, r = -.750 with QUO210). These correlations indicate that states with higher preconception health engagement tend to have both lower partner stress prevalence and lower PPD prevalence, consistent with the theoretical model in which state-level health context influences both constructs. The PCHE index was moderately correlated with structural access (r = .606), reflecting shared variance related to health system engagement, and was nearly uncorrelated with counseling intensity (r = -.128), confirming that preconception behavioral engagement is empirically distinct from the intensity of prenatal counseling.
+    </p>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 1</p>
+        <p class="figure-title">Distribution of Pre-Conception Health Engagement (PCHE) Index Across State-Year Observations</p>
+        <img src="../figures/fig1_pcha_distribution.png" alt="Histogram showing the distribution of PCHE index values across 188 state-year observations">
+        <p class="figure-note"><em>Note.</em> N = 188 state-year observations. The PCHE index is the mean of z-scored component indicators, with a minimum of three non-missing components required.</p>
+    </div>
+
+    <h3>Primary Interaction Results</h3>
+    <p>
+        Table 1 presents the primary moderation results across all four risk anchors. For both primary partner stress indicators (QUO197 and QUO210), the PCHE &times; risk interaction was significant and negative, indicating that higher PCHE attenuated the positive association between partner stress and PPD. For QUO197 (partner arguing), the interaction beta was -0.382 (parametric p = .001), with the model including the interaction (adjusted R&sup2; = .450) showing meaningful improvement over both the risk-only model (adjusted R&sup2; = .372) and the additive model (adjusted R&sup2; = .421). For QUO210 (any partner stressor), results were closely comparable: interaction beta = -0.374 (p = .001), with adjusted R&sup2; improving from .420 (risk only) to .443 (additive) to .472 (interaction). Permutation p-values were .091 and .079 for QUO197 and QUO210, respectively, and bootstrap 95% confidence intervals excluded zero for both indicators ([-0.650, -0.042] and [-0.636, -0.082]).
+    </p>
+    <p>
+        For the secondary intimate partner violence indicators (QUO313 and QUO315), the interaction was not significant (betas = -0.092 and -0.083, p = .414 and .472), with permutation p-values exceeding .70 and bootstrap confidence intervals encompassing zero. This null result for IPV is interpretable: intimate partner violence represents a qualitatively different and more severe form of partner-related adversity than relational conflict, and its effects on PPD may be less amenable to moderation by health engagement behaviors. The sample size for these indicators was also substantially smaller (n = 111 vs. 188), reducing statistical power.
+    </p>
+
+    <!-- TABLE 1 -->
+    <table>
+        <caption>
+            <span class="table-number">Table 1</span>
+            Primary Interaction Results Across Risk Anchors
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">Risk anchor</th>
+                <th><em>n</em></th>
+                <th>Risk-only adj. <em>R</em>&sup2;</th>
+                <th>Additive adj. <em>R</em>&sup2;</th>
+                <th>Interaction adj. <em>R</em>&sup2;</th>
+                <th>Interaction <em>&beta;</em></th>
+                <th><em>p</em></th>
+                <th>Perm. <em>p</em></th>
+                <th>Bootstrap 95% CI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">QUO197 (partner arguing)</td>
+                <td>188</td>
+                <td>.372</td>
+                <td>.421</td>
+                <td>.450</td>
+                <td>-0.382</td>
+                <td>.001</td>
+                <td>.091</td>
+                <td>[-0.650, -0.042]</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO210 (any partner stressor)</td>
+                <td>188</td>
+                <td>.420</td>
+                <td>.443</td>
+                <td>.472</td>
+                <td>-0.374</td>
+                <td>.001</td>
+                <td>.079</td>
+                <td>[-0.636, -0.082]</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO313 (physical IPV)</td>
+                <td>111</td>
+                <td>.471</td>
+                <td>.580</td>
+                <td>.579</td>
+                <td>-0.092</td>
+                <td>.414</td>
+                <td>.728</td>
+                <td>[-0.966, 0.146]</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO315 (any IPV)</td>
+                <td>111</td>
+                <td>.499</td>
+                <td>.595</td>
+                <td>.593</td>
+                <td>-0.083</td>
+                <td>.472</td>
+                <td>.716</td>
+                <td>[-0.675, 0.367]</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> All models include z-scored risk anchor, z-scored PCHE index, and their interaction. Permutation tests used 5,000 iterations (seed = 42). Bootstrap confidence intervals are bias-corrected and accelerated, 5,000 iterations. IPV = intimate partner violence.</p>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 2</p>
+        <p class="figure-title">Interaction Between Partner Stress and PCHE Predicting Postpartum Depression Prevalence</p>
+        <img src="../figures/fig2_interaction_QUO197.png" alt="Scatter plot showing interaction between QUO197 partner arguing and PCHE in predicting PPD">
+        <img src="../figures/fig2_interaction_QUO210.png" alt="Scatter plot showing interaction between QUO210 any partner stressor and PCHE in predicting PPD">
+        <p class="figure-note"><em>Note.</em> Top panel: QUO197 (partner arguing). Bottom panel: QUO210 (any partner stressor). Points represent state-year observations. Simple slopes illustrate the association between partner stress and PPD at high (+1 <em>SD</em>) and low (-1 <em>SD</em>) levels of PCHE.</p>
+    </div>
+
+    <h3>Fixed-Effects and Cluster-Robust Results</h3>
+    <p>
+        Table 2 presents results from fixed-effects models that include state dummy variables, thereby controlling for all stable between-state differences and estimating the interaction effect from within-state variation alone. For QUO197, the fixed-effects interaction beta was -0.474 (p = .014), larger in magnitude than the pooled estimate, indicating that the moderation effect was, if anything, strengthened when between-state confounders were absorbed. Cluster-robust standard errors yielded a modestly attenuated but still significant result (CR beta = -0.474, p = .040). For QUO210, results were stronger still: FE beta = -0.548 (p = .004), CR p = .031. The secondary IPV indicators remained nonsignificant in fixed-effects models (QUO313: FE beta = 0.238, p = .412; QUO315: FE beta = -0.140, p = .588).
+    </p>
+
+    <!-- TABLE 2 -->
+    <table>
+        <caption>
+            <span class="table-number">Table 2</span>
+            Fixed-Effects and Cluster-Robust Interaction Results
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">Risk anchor</th>
+                <th>FE <em>&beta;</em></th>
+                <th>FE <em>p</em></th>
+                <th>CR <em>&beta;</em></th>
+                <th>CR <em>p</em></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">QUO197 (partner arguing)</td>
+                <td>-0.474</td>
+                <td>.014</td>
+                <td>-0.474</td>
+                <td>.040</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO210 (any partner stressor)</td>
+                <td>-0.548</td>
+                <td>.004</td>
+                <td>-0.548</td>
+                <td>.031</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO313 (physical IPV)</td>
+                <td>0.238</td>
+                <td>.412</td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">QUO315 (any IPV)</td>
+                <td>-0.140</td>
+                <td>.588</td>
+                <td>&mdash;</td>
+                <td>&mdash;</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> FE = state fixed-effects model; CR = cluster-robust standard errors (CR1). Cluster-robust results are reported only for significant FE models. All models include state dummy variables, z-scored risk anchor, z-scored PCHE, and their interaction.</p>
+
+    <h3>Strict Pre-Conception Sensitivity Analysis</h3>
+    <p>
+        The most critical robustness test concerned temporal ordering. If the PCHE moderating effect were driven primarily by early prenatal care components&mdash;which are measured after conception and could therefore be influenced by the same psychological processes that lead to PPD&mdash;the causal interpretation would be substantially weakened. Table 3 presents results for the full PCHE index alongside the strict pre-conception variant (eight components, excluding postpartum-period items) and the narrow pre-pregnancy variant (five components, all measured before pregnancy).
+    </p>
+    <p>
+        The results are unequivocal: the moderating effect was fully preserved across all three variants. For QUO197, the strict pre-conception interaction beta was -0.387 (p = .002), virtually identical to the full index beta of -0.382. The narrow pre-pregnancy variant yielded beta = -0.380 (p = .003). In fixed-effects models, the strict variant produced beta = -0.404 (p = .034) and the narrow variant beta = -0.347 (p = .051), with the latter approaching but not quite reaching conventional significance due to reduced component count and coverage. For QUO210, the pattern was even stronger: strict pre-conception beta = -0.392 (p = .001), narrow pre-pregnancy beta = -0.383 (p = .001), and fixed-effects estimates of -0.500 (p = .008) and -0.407 (p = .018), respectively. These findings demonstrate that the moderating effect of PCHE on the partner-stress-to-PPD association is carried by behaviors that unambiguously precede pregnancy, not by prenatal care components that could be confounded with early pregnancy experiences.
+    </p>
+
+    <!-- TABLE 3 -->
+    <table>
+        <caption>
+            <span class="table-number">Table 3</span>
+            PCHE Variant Comparison: Full, Strict Pre-Conception, and Narrow Pre-Pregnancy Indices
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">Variant</th>
+                <th>Risk anchor</th>
+                <th>Pooled <em>&beta;</em></th>
+                <th>Pooled <em>p</em></th>
+                <th>FE <em>&beta;</em></th>
+                <th>FE <em>p</em></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">Full PCHE (12 components)</td>
+                <td>QUO197</td>
+                <td>-0.382</td>
+                <td>.001</td>
+                <td>-0.474</td>
+                <td>.014</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Strict pre-conception (8 components)</td>
+                <td>QUO197</td>
+                <td>-0.387</td>
+                <td>.002</td>
+                <td>-0.404</td>
+                <td>.034</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Narrow pre-pregnancy (5 components)</td>
+                <td>QUO197</td>
+                <td>-0.380</td>
+                <td>.003</td>
+                <td>-0.347</td>
+                <td>.051</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Full PCHE (12 components)</td>
+                <td>QUO210</td>
+                <td>-0.374</td>
+                <td>.001</td>
+                <td>-0.548</td>
+                <td>.004</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Strict pre-conception (8 components)</td>
+                <td>QUO210</td>
+                <td>-0.392</td>
+                <td>.001</td>
+                <td>-0.500</td>
+                <td>.008</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Narrow pre-pregnancy (5 components)</td>
+                <td>QUO210</td>
+                <td>-0.383</td>
+                <td>.001</td>
+                <td>-0.407</td>
+                <td>.018</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> Full PCHE includes all 12 components. Strict pre-conception excludes postpartum-period components. Narrow pre-pregnancy includes only five indicators measured before pregnancy: exercise (QUO179), multivitamins (QUO41, QUO65), dental visits (QUO249), and preconception health visits (QUO75). FE = state fixed-effects model.</p>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 3</p>
+        <p class="figure-title">Leave-One-State-Out (LOSO) Sensitivity Analysis: Forest Plots of Interaction Coefficients</p>
+        <img src="../figures/fig3_loso_QUO197.png" alt="Forest plot showing LOSO results for QUO197">
+        <img src="../figures/fig3_loso_QUO210.png" alt="Forest plot showing LOSO results for QUO210">
+        <p class="figure-note"><em>Note.</em> Top panel: QUO197. Bottom panel: QUO210. Each point represents the interaction coefficient estimated with one state removed. The dashed line indicates the full-sample estimate. Error bars represent 95% confidence intervals.</p>
+    </div>
+
+    <h3>Era-Specific Consistency</h3>
+    <p>
+        The harmonization of two different PPD items across survey eras (QUO74 for 2004&ndash;2008, QUO219 for 2009&ndash;2011) raises the question of whether the moderation effect is consistent across eras or an artifact of combining heterogeneous outcome measures. Era-specific analyses yielded reassuring results. For QUO197, the interaction beta was -0.385 (p = .001) in the 2004&ndash;2008 era and -0.615 (p = .001) in the 2009&ndash;2011 era. For QUO210, the corresponding values were -0.369 (p = .001) and -0.645 (p = .001). The moderation effect was significant and in the expected direction in both eras, with the later era showing a stronger effect. Strict pre-conception variants exhibited the same pattern: 2004&ndash;2008 betas of -0.374 and -0.369 for QUO197 and QUO210, and 2009&ndash;2011 betas of -0.721 (p &lt; .001) and -0.753 (p &lt; .001). The consistency across eras indicates that the moderation effect is not an artifact of outcome harmonization and may have strengthened over time as the relationship between preconception health infrastructure and PPD outcomes became more pronounced.
+    </p>
+    <h3>Leave-One-State-Out Stability</h3>
+    <p>
+        LOSO analyses confirmed that the moderation effect was not driven by any single influential state. For QUO197, the interaction beta ranged from -0.449 to -0.257 across the 24 jackknife samples, with a mean of -0.381 and standard deviation of 0.037. For QUO210, the range was -0.432 to -0.243, with a mean of -0.373 and standard deviation of 0.033. No single state&rsquo;s removal pushed the interaction to nonsignificance, and the tight clustering of estimates around the full-sample value indicates high stability (see Figure 3). Strict pre-conception LOSO results were comparably stable: QUO197 range [-0.433, -0.256], mean = -0.386; QUO210 range [-0.426, -0.244], mean = -0.392.
+    </p>
+    <h3>Leave-One-Component-Out Stability</h3>
+    <p>
+        LOCO analyses assessed whether the moderating effect depended on any single PCHE component. All 24 models (12 components &times; 2 risk anchors) yielded significant negative interaction terms, with betas ranging from -0.420 to -0.347. This indicates that no single component was necessary for the moderation effect; the PCHE index is robust to the removal of any individual indicator, consistent with a broad construct rather than a single-indicator artifact.
+    </p>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 4</p>
+        <p class="figure-title">Individual Component Interaction Heatmap</p>
+        <img src="../figures/fig4_component_heatmap.png" alt="Heatmap showing individual component interactions with partner stress predicting PPD">
+        <p class="figure-note"><em>Note.</em> Heatmap displays the interaction coefficient and FDR-corrected significance for each PCHE component &times; risk anchor combination.</p>
+    </div>
+
+    <h3>Individual Component Analysis</h3>
+    <p>
+        To identify which PCHE components contributed most strongly to the moderation effect, we estimated the interaction separately for each component and applied Benjamini-Hochberg false discovery rate correction (Benjamini &amp; Hochberg, 1995). The three strongest individual moderators were pregnancy intentionality (QUO257: beta = -0.531, FDR-corrected p = .001), preconception exercise (QUO179: beta = -0.944, FDR = .001), and early prenatal care initiation (QUO297: beta = -0.742, FDR = .002). The dominance of intentionality and exercise&mdash;both unambiguously preconception behaviors&mdash;among the top individual moderators further supports the temporal precedence of the PCHE construct (see Figure 4).
+    </p>
+    <h3>Discriminant Validity</h3>
+    <p>
+        Is PCHE&rsquo;s moderating effect simply a proxy for structural access to health care? Discriminant validity analyses addressed this question in two steps. First, the structural access interaction was estimated independently, yielding a significant but weaker effect (beta for structural access &times; QUO197: p = .034). Second, when both PCHE and structural access interactions were included in a single model, PCHE retained a larger coefficient (beta = -0.312, p = .142) while structural access was negligible (beta = -0.033, p = .834). Neither reached conventional significance in the joint model, likely due to shared variance inflating standard errors, but the pattern clearly favors PCHE as the more informative moderator. The structural access index captures whether women have insurance; the PCHE index captures whether they actively engage with their health before pregnancy. These are overlapping but distinguishable constructs, and the behavioral engagement dimension appears to carry the moderating effect.
+    </p>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 5</p>
+        <p class="figure-title">Parallel Analysis Scree Plot for PCHE Components (7-Component Full-Coverage Subset)</p>
+        <img src="../figures/run_20260324T_pcha_v2/fig5_parallel_analysis_7comp.png" alt="Scree plot comparing observed eigenvalues to parallel analysis thresholds">
+        <p class="figure-note"><em>Note.</em> Solid line represents observed eigenvalues from principal component analysis. Dashed line represents the 95th percentile of eigenvalues from 1,000 random data sets of the same dimensions (Horn, 1965). Components with observed eigenvalues exceeding the random threshold are retained. PC1 eigenvalue = 4.41 (63% variance explained).</p>
+    </div>
+
+    <h3>The Counseling Paradox</h3>
+    <p>
+        A striking and theoretically important finding emerged from the counseling intensity analysis. In contrast to PCHE&rsquo;s negative (protective) interaction, counseling intensity exhibited a significant positive interaction with partner stress: counseling &times; QUO197 beta = +0.401 (p = .010), counseling &times; QUO210 beta = +0.448 (p = .002). This means that in states where more women received prenatal counseling on topics such as emotional health, physical activity, and breastfeeding, the association between partner stress and PPD was stronger, not weaker. This paradoxical finding is consistent with confounding by indication: states with higher counseling intensity may be states that have identified higher need, or states in which providers are more attuned to risk factors and therefore more likely to screen and detect depression. It also highlights the fundamental difference between upstream preconception health engagement (which may reflect genuine health capacity and resilience) and downstream counseling (which may reflect reactive clinical response to detected risk). The counseling paradox strengthens the specificity of the PCHE finding by demonstrating that not all health-related state-level indices moderate partner stress in the same direction.
+    </p>
+    <h3>Within-State Permutation</h3>
+    <p>
+        Within-state permutation tests, which shuffled PCHE values only within states across years while preserving between-state distributions, yielded uniformly nonsignificant results (all p &gt; .68). This demonstrates that the PCHE moderation effect is a between-state phenomenon: it reflects stable differences between states in their preconception health engagement environments, not year-to-year fluctuations within states. This is consistent with the interpretation that PCHE captures enduring contextual characteristics of state health infrastructure and population health culture, rather than transient annual variations.
+    </p>
+    <h3>Multicollinearity Assessment</h3>
+    <p>
+        Variance inflation factors for all model terms were below 3.0, with the interaction term VIF ranging from 1.32 to 1.35 across specifications. These values are well within acceptable ranges, indicating that the moderation results are not artifacts of collinearity among predictors.
+    </p>
+    <h3>Corrected Benefit Estimates</h3>
+    <p>
+        To provide a practical sense of the magnitude of the PCHE moderation effect, we computed corrected benefit estimates expressing the predicted PPD prevalence at mean partner stress levels for states at the 25th versus 75th percentile of PCHE. For QUO197 as the risk anchor, the model predicted that a state at the 25th percentile of PCHE would have a PPD prevalence of 14.9%, while a state at the 75th percentile would have a predicted prevalence of 12.2%, a difference of 2.74 percentage points. For QUO210, the corresponding values were 14.9% and 12.7%, yielding a difference of 2.25 percentage points. Relative to the mean PPD prevalence of 13.0%, these differences represent approximately 17% to 21% relative reductions&mdash;a substantial population-level effect that, if confirmed at the individual level, would represent one of the larger modifiable influences on PPD.
+    </p>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 6</p>
+        <p class="figure-title">Model Comparison: Incremental Explained Variance Across Specifications</p>
+        <img src="../figures/fig6_model_comparison.png" alt="Bar chart comparing adjusted R-squared values across risk-only, additive, and interaction models">
+        <p class="figure-note"><em>Note.</em> Bars represent adjusted <em>R</em>&sup2; for risk-only (partner stress alone), additive (partner stress + PCHE), and interaction (partner stress + PCHE + partner stress &times; PCHE) models for each risk anchor.</p>
+    </div>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 7</p>
+        <p class="figure-title">PCHE Variant Comparison: Full, Strict Pre-Conception, and Narrow Pre-Pregnancy Interaction Coefficients</p>
+        <img src="../figures/run_20260324T_pcha_v2/fig7_variant_comparison.png" alt="Comparison of interaction coefficients across PCHE index variants">
+        <p class="figure-note"><em>Note.</em> Bars represent pooled and fixed-effects interaction coefficients for the full PCHE index, strict pre-conception variant (8 components), and narrow pre-pregnancy variant (5 components). Error bars represent 95% confidence intervals.</p>
+    </div>
+
+    <h2>Discussion</h2>
+    <p>
+        This study introduces Pre-Conception Health Engagement (PCHE) as a novel ecological construct and demonstrates that it significantly moderates the association between partner stress and postpartum depression at the state-year level. Across 188 observations drawn from 40 U.S. jurisdictions over a 12-year period, states with higher levels of preconception health engagement exhibited a substantially weaker association between partner stress prevalence and PPD prevalence. The effect was robust to fixed-effects estimation, cluster-robust inference, bootstrap resampling, leave-one-state-out sensitivity, leave-one-component-out sensitivity, era-specific replication, and&mdash;most critically&mdash;the removal of all postpartum-period components from the PCHE index. A paradoxical positive interaction for prenatal counseling intensity provided additional specificity, indicating that the PCHE finding is not merely an artifact of general health system engagement but reflects something distinctive about upstream preconception behavioral investment.
+    </p>
+    <h3>Pre-Conception Components Carry the Effect</h3>
+    <p>
+        Perhaps the most important finding of this study is that the PCHE moderating effect was fully preserved&mdash;and in some specifications strengthened&mdash;when analysis was restricted to components measured before pregnancy. The strict pre-conception variant (excluding postpartum-period items) yielded interaction betas of -0.387 to -0.392, virtually identical to the full index, and the narrow pre-pregnancy variant (including only exercise, multivitamins, dental visits, and preconception health visits) yielded betas of -0.380 to -0.383. This finding directly addresses the most serious threat to causal interpretation in this design: that PCHE components measured during pregnancy might be consequences of the same processes that produce PPD, rather than antecedent moderators. By demonstrating that strictly preconception behaviors carry the moderation effect, we can be more confident that PCHE reflects something about women&rsquo;s health engagement and capacity before pregnancy that shapes how partner stress translates into postpartum depression.
+    </p>
+    <p>
+        Individual component analysis reinforced this conclusion. The three strongest individual moderators by FDR-corrected significance were pregnancy intentionality (beta = -0.531), preconception exercise (beta = -0.944), and early prenatal care initiation (beta = -0.742). That intentionality and exercise&mdash;both unambiguously preconception constructs&mdash;ranked first and second among individual moderators provides convergent evidence that the temporal sequencing of PCHE is genuine.
+    </p>
+    <h3>A Between-State Phenomenon</h3>
+    <p>
+        The within-state permutation analysis yielded a clear null result (all p &gt; .68), demonstrating that the PCHE moderation effect reflects stable between-state differences rather than within-state year-to-year fluctuations. This has important implications for interpretation. The PCHE index is not capturing transient annual changes in health behavior that happen to coincide with partner stress patterns. Rather, it is capturing enduring characteristics of state health environments&mdash;the infrastructure, policies, cultural norms, and programmatic investments that shape how women in a given state engage with their health before pregnancy. States with robust preconception health programs, strong health education systems, accessible preventive care, and cultural orientations toward health engagement tend to have populations in which the link between partner stress and postpartum depression is attenuated. This contextual interpretation is precisely what ecological analysis is designed to reveal, and it cannot be reduced to individual-level mechanisms.
+    </p>
+    <h3>The Counseling Paradox: Upstream Versus Downstream</h3>
+    <p>
+        The finding that prenatal counseling intensity moderates the partner-stress-to-PPD association in the positive direction (beta = +0.40 to +0.45, p &lt; .01) is counterintuitive on its face: one might expect that more counseling would be protective. However, this result becomes interpretable through the lens of confounding by indication. States in which more women receive prenatal counseling about emotional health, physical activity, and related topics may be states that have recognized higher population-level need and responded with programmatic expansion. In such states, counseling is a marker of detected risk, not a buffer against it. Furthermore, counseling during pregnancy is fundamentally a downstream intervention&mdash;it occurs after the woman is already pregnant, has already experienced partner stress, and may already be on a trajectory toward depression. PCHE, by contrast, captures upstream engagement: behaviors and orientations that precede pregnancy and that may build resilience, agency, and health capacity before the stressors of pregnancy and the postpartum period are encountered.
+    </p>
+    <p>
+        This upstream-versus-downstream distinction has profound implications. If the counseling paradox reflects confounding by indication, then the policy response should not be to reduce prenatal counseling (which remains essential for individual-level screening and support) but rather to invest in preconception health infrastructure that strengthens women&rsquo;s health engagement before they become pregnant. Counseling may treat; preconception health engagement may prevent. Both are needed, but the population-level dynamics are fundamentally different.
+    </p>
+    <h3>Comparison With Prior Literature</h3>
+    <p>
+        There is no direct precedent for the present findings in the published literature. No previous study has tested ecological moderation of the partner-stress-to-PPD association, and no previous study has constructed a composite preconception health engagement index. The closest methodological antecedent is the work of Dadi et al. (2020), who examined cross-national associations between structural factors and perinatal depression, finding that country-level economic inequality was associated with antenatal depression prevalence. Our study extends this ecological approach by introducing moderation, by focusing specifically on PPD rather than antenatal depression, and by using theory-driven behavioral composites rather than structural economic indicators.
+    </p>
+    <p>
+        The individual components of PCHE have each been studied in isolation at the individual level. Exercise before and during pregnancy has demonstrated antidepressant effects in multiple trials and observational studies, with anti-inflammatory pathways and neurobiological mechanisms posited (Lancaster et al., 2010). Planned pregnancies are associated with better mental health outcomes through multiple pathways, including psychological readiness, partner relationship quality, and socioeconomic preparation (Abbasi et al., 2013). Multivitamin and folate use before conception may support neurobiological resilience through one-carbon metabolism pathways. Dental care utilization, while not directly studied in the PPD context, reflects a general orientation toward preventive health care that may serve as a behavioral marker of broader health engagement. What is novel here is the demonstration that these individually modest protective factors aggregate into a composite that functions as a meaningful ecological moderator, suggesting that the whole may be greater than the sum of its parts.
+    </p>
+    <h3>Clinical and Policy Implications</h3>
+    <p>
+        The corrected benefit estimates suggest that moving a state from the 25th to the 75th percentile of PCHE is associated with a 2.3 to 2.7 percentage point reduction in PPD prevalence, equivalent to a 17% to 21% relative reduction. While ecological effect sizes do not directly translate to individual-level effects, the magnitude is noteworthy. If even a fraction of this ecological association reflects causal pathways, preconception health optimization programs targeting women at high risk for partner stress could meaningfully reduce PPD burden. State-level investments in preconception health&mdash;including accessible exercise programs, vitamin supplementation initiatives, preconception health visits, pregnancy planning support, and dental care access&mdash;may attenuate the population-level impact of partner stress on postpartum depression.
+    </p>
+    <p>
+        Importantly, we deliberately chose the term &ldquo;Pre-Conception Health Engagement&rdquo; rather than &ldquo;Pre-Conception Health Preparedness&rdquo; or &ldquo;Pre-Conception Health Readiness&rdquo; to avoid any implication that women who develop PPD failed to prepare adequately. The intent is not to shift responsibility to individual women but to identify modifiable population-level characteristics that policy can target. PCHE is a feature of state environments, not a judgment about individual mothers.
+    </p>
+    <h3>Theoretical Implications: A Directed Acyclic Graph</h3>
+    <p>
+        Figure 8 presents a directed acyclic graph (DAG) illustrating the proposed causal structure. State context influences partner stress prevalence, PCHE levels, and PPD prevalence. Partner stress influences PPD directly. PCHE influences PPD both directly and through its interaction with partner stress (moderation). The DAG clarifies that PCHE is not proposed as an intervention on partner stress itself but as a contextual factor that shapes how partner stress translates into depression.
+    </p>
+
+    <div class="figure-container">
+        <p class="figure-label">Figure 8</p>
+        <p class="figure-title">Directed Acyclic Graph: Proposed Causal Structure of PCHE Moderation</p>
+        <svg class="dag-svg" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg" style="max-width:5.5in; display:block; margin:12pt auto;">
+            <!-- Boxes -->
+            <rect x="170" y="10" width="160" height="36" rx="4" fill="white" stroke="black" stroke-width="1.5"/>
+            <text x="250" y="33" text-anchor="middle" font-family="Garamond, serif" font-size="13" font-weight="bold">State Context</text>
+
+            <rect x="30" y="140" width="160" height="36" rx="4" fill="white" stroke="black" stroke-width="1.5"/>
+            <text x="110" y="163" text-anchor="middle" font-family="Garamond, serif" font-size="13" font-weight="bold">Partner Stress</text>
+
+            <rect x="310" y="140" width="160" height="36" rx="4" fill="white" stroke="black" stroke-width="1.5"/>
+            <text x="390" y="163" text-anchor="middle" font-family="Garamond, serif" font-size="13" font-weight="bold">PCHE</text>
+
+            <rect x="170" y="270" width="160" height="36" rx="4" fill="white" stroke="black" stroke-width="1.5"/>
+            <text x="250" y="293" text-anchor="middle" font-family="Garamond, serif" font-size="13" font-weight="bold">PPD</text>
+
+            <!-- Moderation box -->
+            <rect x="120" y="195" width="200" height="30" rx="4" fill="#f0f0f0" stroke="black" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="220" y="215" text-anchor="middle" font-family="Garamond, serif" font-size="11" font-style="italic">Partner Stress &#215; PCHE</text>
+
+            <!-- Arrows from State Context -->
+            <line x1="210" y1="46" x2="135" y2="140" stroke="black" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+            <line x1="290" y1="46" x2="365" y2="140" stroke="black" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+            <line x1="250" y1="46" x2="250" y2="270" stroke="black" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+            <!-- Arrow Partner Stress to PPD -->
+            <line x1="135" y1="176" x2="200" y2="270" stroke="black" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+            <!-- Arrow PCHE to PPD -->
+            <line x1="365" y1="176" x2="300" y2="270" stroke="black" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+            <!-- Arrows to moderation box -->
+            <line x1="130" y1="176" x2="165" y2="195" stroke="#666" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowgray)"/>
+            <line x1="370" y1="176" x2="275" y2="195" stroke="#666" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowgray)"/>
+            <!-- Moderation to PPD -->
+            <line x1="220" y1="225" x2="240" y2="270" stroke="#666" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowgray)"/>
+
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+                </marker>
+                <marker id="arrowgray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+                </marker>
+            </defs>
+        </svg>
+        <p class="figure-note"><em>Note.</em> Solid arrows represent direct effects. Dashed arrows represent the moderation (interaction) pathway. State context influences partner stress, PCHE, and PPD. The interaction of partner stress and PCHE moderates the partner-stress-to-PPD association. The DAG illustrates that PCHE does not intervene on partner stress but modifies its translation into depression at the population level.</p>
+    </div>
+
+    <h3>Limitations</h3>
+    <p>
+        We present our limitations thoroughly and transparently, as the credibility of novel findings rests on honest acknowledgment of their boundaries.
+    </p>
+    <p>
+        First and foremost, this study is ecological in design. All variables are aggregated at the state-year level, and all findings describe associations among state-level aggregates. We cannot infer from these data that individual women who exercise, take vitamins, and plan their pregnancies are individually protected from the depressive effects of partner stress. The ecological fallacy cautions that relationships observed at the aggregate level may not hold at the individual level, and vice versa. Our findings should be understood as evidence about contextual patterns that warrant individual-level investigation, not as individual-level evidence.
+    </p>
+    <p>
+        Second, PRAMStat provides only point prevalence estimates without accompanying standard errors for unstratified indicators. This means we could not apply precision weighting or meta-analytic variance estimation techniques that would account for differential reliability across state-year observations. States with smaller survey samples presumably have less reliable estimates, but we could not model this differential reliability directly.
+    </p>
+    <p>
+        Third, the harmonization of PPD outcomes across survey eras (QUO74 for 2004&ndash;2008 and QUO219 for 2009&ndash;2011) introduced potential measurement heterogeneity. While the era-specific analyses demonstrated that the moderation effect was consistent (and if anything stronger) across both eras, the possibility that subtle differences in item wording or response patterns influenced results cannot be entirely excluded.
+    </p>
+    <p>
+        Fourth, the permutation p-values for the primary interaction tests were at the boundary of conventional significance (.079&ndash;.091 for the pooled models), which some readers may find concerning. We note, however, that the fixed-effects p-values (.004&ndash;.014) and cluster-robust p-values (.031&ndash;.040) were unambiguously significant, and the bootstrap confidence intervals excluded zero. The permutation test is the most conservative of our inference procedures because it breaks the real correlation between PCHE and partner stress when shuffling PCHE values, potentially destroying genuine variance. We present all inference procedures and let readers evaluate the weight of evidence across methods.
+    </p>
+    <p>
+        Fifth, we acknowledge the potential for forking paths in index construction. The PCHE index was informed by prior exploratory analysis of PRAMStat indicators, and the selection of components was guided by both theory and empirical observation. We disclose this honestly rather than presenting the index as purely theory-driven. The LOCO analysis demonstrates that no single component drives the result, and the convergence between the full, strict, and narrow variants suggests that the construct is robust to alternative operationalizations.
+    </p>
+    <p>
+        Sixth, the within-state permutation null result, while supporting the between-state interpretation, also means that we cannot use these data to test whether within-state temporal changes in PCHE predict within-state changes in the partner-stress-to-PPD association. The effect we observe is cross-sectional at the state level, even though it is derived from a panel.
+    </p>
+    <p>
+        Seventh, the temporal scope of our data (2000&ndash;2011) means that our findings describe patterns from over a decade ago. The landscape of perinatal mental health has changed substantially since 2011, with expanded screening requirements, new treatment options, evolving patterns of partner stress, and the COVID-19 pandemic. Whether the PCHE moderation effect holds in contemporary data is an empirical question that cannot be answered here.
+    </p>
+    <p>
+        Eighth, coverage heterogeneity across PRAMS indicators prevented us from computing Cronbach&rsquo;s alpha for the full 12-component PCHE index across all observations simultaneously. The alpha values reported (.871 for the 7-component full-coverage subset, .936 for the 5-component narrow variant) pertain to subsets of components and observations. While these values are strong, they are not a complete psychometric characterization of the full index.
+    </p>
+    <p>
+        Ninth, QUO16, an indicator of interest for our analyses, was absent from the PRAMStat panel during the study period, precluding its inclusion in any model specification. While this does not threaten the validity of the analyses we conducted, it represents a missed opportunity for additional sensitivity testing.
+    </p>
+
+    <!-- TABLE L1 -->
+    <table>
+        <caption>
+            <span class="table-number">Table L1</span>
+            Summary of Study Limitations
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">#</th>
+                <th style="text-align:left;">Limitation</th>
+                <th style="text-align:left;">Implication</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">1</td>
+                <td style="text-align:left;">Ecological design</td>
+                <td style="text-align:left;">Cannot infer individual-level causation; findings describe state-level contextual patterns</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">2</td>
+                <td style="text-align:left;">No standard errors in PRAMStat</td>
+                <td style="text-align:left;">Could not apply precision weighting or meta-analytic variance estimation</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">3</td>
+                <td style="text-align:left;">PPD outcome harmonization</td>
+                <td style="text-align:left;">Potential measurement heterogeneity across survey eras (QUO74 vs. QUO219)</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">4</td>
+                <td style="text-align:left;">Permutation p-values at boundary</td>
+                <td style="text-align:left;">Most conservative test yields .079&ndash;.091; other inference methods are clearly significant</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">5</td>
+                <td style="text-align:left;">Forking paths in index construction</td>
+                <td style="text-align:left;">PCHE informed by exploratory analysis; mitigated by LOCO and variant convergence</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">6</td>
+                <td style="text-align:left;">Within-state null result</td>
+                <td style="text-align:left;">Cannot test within-state temporal changes in PCHE moderation; effect is cross-sectional</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">7</td>
+                <td style="text-align:left;">Temporal scope (2000&ndash;2011)</td>
+                <td style="text-align:left;">Findings may not generalize to contemporary perinatal mental health landscape</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">8</td>
+                <td style="text-align:left;">Coverage heterogeneity</td>
+                <td style="text-align:left;">Alpha computed on subsets only; not a complete psychometric characterization of full index</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">9</td>
+                <td style="text-align:left;">QUO16 absent from panel</td>
+                <td style="text-align:left;">Missed opportunity for additional sensitivity testing of intentionality domain</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> Limitations are presented in order of discussion in the text. Each limitation is accompanied by its primary implication for interpretation of findings.</p>
+
+    <h3>Future Directions</h3>
+    <p>
+        The findings reported here suggest a staged research program to translate ecological evidence into clinical and policy impact. Phase 1 would involve an individual-level prospective cohort study in which women are assessed on PCHE components before conception and followed through the postpartum period, with partner stress and depressive symptoms measured at multiple timepoints. This would directly test whether individual-level preconception health engagement moderates the individual-level association between partner stress and PPD, providing the individual-level confirmation that ecological data cannot supply. Phase 2, contingent on Phase 1 results, would involve a pragmatic randomized trial of a preconception health optimization intervention targeting women at elevated risk for partner stress, testing whether enhancing PCHE components (exercise support, vitamin provision, pregnancy planning counseling, dental care access) reduces PPD incidence in a high-risk population. Phase 3 would be a component optimization study examining which specific elements of the PCHE construct contribute most to the moderating effect, using factorial or SMART trial designs to identify the most efficient intervention package.
+    </p>
+    <p>
+        More immediately, replication with contemporary PRAMStat data (2016&ndash;2022, which includes expanded indicator coverage and more participating states) would test whether the PCHE moderation effect persists in a more recent period and with a larger panel. The introduction of the PRAMS 2016 revised questionnaire provides additional indicators that could strengthen the PCHE index and permit more precise measurement.
+    </p>
+
+    <!-- TABLE F1 -->
+    <table>
+        <caption>
+            <span class="table-number">Table F1</span>
+            Proposed Research Program
+        </caption>
+        <thead>
+            <tr>
+                <th style="text-align:left;">Phase</th>
+                <th style="text-align:left;">Design</th>
+                <th style="text-align:left;">Objective</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left;">1</td>
+                <td style="text-align:left;">Individual-level prospective cohort</td>
+                <td style="text-align:left;">Test whether individual-level PCHE moderates the partner-stress-to-PPD association across the preconception-to-postpartum trajectory</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">2</td>
+                <td style="text-align:left;">Pragmatic randomized trial</td>
+                <td style="text-align:left;">Test whether a preconception health optimization intervention reduces PPD incidence among women at elevated risk for partner stress</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;">3</td>
+                <td style="text-align:left;">Component optimization (factorial/SMART)</td>
+                <td style="text-align:left;">Identify which specific PCHE components contribute most to the moderating effect and determine the most efficient intervention package</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note"><em>Note.</em> Each phase is contingent on the results of the preceding phase. Phase 1 provides individual-level confirmation; Phase 2 tests intervention efficacy; Phase 3 optimizes intervention components.</p>
+
+    <h3>Conclusion</h3>
+    <p>
+        Postpartum depression affects one in eight mothers, costs the United States over $14 billion annually, and has partner stress as its strongest modifiable risk factor. Yet the field has devoted remarkably little attention to what moderates the impact of partner stress on PPD. This study provides the first evidence that Pre-Conception Health Engagement&mdash;a composite index of preconception health behaviors, pregnancy intentionality, and early care engagement&mdash;moderates the ecological association between partner stress and PPD. The moderating effect is robust to fixed-effects estimation, stable across states and survey eras, carried by behaviors that precede pregnancy, and distinguishable from structural access to care. The paradoxical positive interaction for prenatal counseling intensity reinforces the specificity of the PCHE construct and highlights the distinction between upstream engagement and downstream intervention.
+    </p>
+    <p>
+        These ecological findings do not prove that individual women who engage in preconception health behaviors are individually protected from the effects of partner stress. They do, however, establish that states characterized by higher preconception health engagement show a population-level buffering effect that is consistent, robust, and theoretically coherent. If the promise of these ecological findings is confirmed at the individual level, the implications for prevention are substantial: investing in preconception health&mdash;before pregnancy, before partner stress peaks, before the postpartum period begins&mdash;may represent a fundamentally different and potentially more effective approach to reducing the burden of postpartum depression than the current emphasis on prenatal screening and postpartum treatment. The best time to intervene on postpartum depression may be before conception itself.
+    </p>
+
+    <h2>References</h2>
+    <div class="references">
+        <p>
+            Abbasi, S., Chuang, C. H., Dagher, R., Zhu, J., &amp; Kjerulff, K. (2013). Unintended pregnancy and postpartum depression among first-time mothers. <em>Journal of Women&rsquo;s Health</em>, <em>22</em>(5), 412&ndash;416. https://doi.org/10.1089/jwh.2012.3926
+        </p>
+        <p>
+            Bauman, B. L., Ko, J. Y., Cox, S., D&rsquo;Angelo, D. V., Warner, L., Folger, S., Tevendale, H. D., Coy, K. C., Harrison, L., &amp; Barfield, W. D. (2020). Vital signs: Postpartum depressive symptoms and provider discussions about perinatal depression&mdash;United States, 2018. <em>Morbidity and Mortality Weekly Report</em>, <em>69</em>(19), 575&ndash;581. https://doi.org/10.15585/mmwr.mm6919a2
+        </p>
+        <p>
+            Beck, C. T. (2001). Predictors of postpartum depression: An update. <em>Nursing Research</em>, <em>50</em>(5), 275&ndash;285. https://doi.org/10.1097/00006199-200109000-00004
+        </p>
+        <p>
+            Benjamini, Y., &amp; Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple testing. <em>Journal of the Royal Statistical Society: Series B</em>, <em>57</em>(1), 289&ndash;300.
+        </p>
+        <p>
+            Campos, B. C., Rodrigues, O. M. P. R., Apparent, T. G. M., &amp; Monteiro, C. (2021). Factors associated with postpartum depression symptoms: A combined analysis. <em>BMC Public Health</em>, <em>21</em>, Article 155. https://doi.org/10.1186/s12889-020-09999-2
+        </p>
+        <p>
+            Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. <em>Psychometrika</em>, <em>16</em>(3), 297&ndash;334.
+        </p>
+        <p>
+            Dadi, A. F., Miller, E. R., &amp; Mwanri, L. (2020). Antenatal depression and its association with adverse birth outcomes in low and middle-income countries: A systematic review and meta-analysis. <em>Frontiers in Psychiatry</em>, <em>11</em>, Article 248. https://doi.org/10.3389/fpsyt.2020.00248
+        </p>
+        <p>
+            Gastaldon, C., Solmi, M., Correll, C. U., Barbui, C., &amp; Schoretsanitis, G. (2022). Risk factors of postpartum depression and depressive symptoms: Umbrella review of current evidence from systematic reviews and meta-analyses of observational studies. <em>British Journal of Psychiatry</em>, <em>221</em>(4), 591&ndash;602. https://doi.org/10.1192/bjp.2022.45
+        </p>
+        <p>
+            Horn, J. L. (1965). A rationale and test for the number of factors in factor analysis. <em>Psychometrika</em>, <em>30</em>(2), 179&ndash;185.
+        </p>
+        <p>
+            Lancaster, C. A., Gold, K. J., Flynn, H. A., Yoo, H., Marcus, S. M., &amp; Davis, M. M. (2010). Risk factors for depressive symptoms during pregnancy: A systematic review. <em>American Journal of Obstetrics and Gynecology</em>, <em>202</em>(1), 5&ndash;14. https://doi.org/10.1016/j.ajog.2009.09.007
+        </p>
+        <p>
+            Luca, D. L., Margiotta, C., Staatz, C., Garber, E., Annis, A., Kolber, C., &amp; Zivin, K. (2020). Financial burden of untreated perinatal mood and anxiety disorders among 2017 births in the United States. <em>American Journal of Public Health</em>, <em>110</em>(6), 888&ndash;896. https://doi.org/10.2105/AJPH.2020.305619
+        </p>
+        <p>
+            Patton, G. C., Romaniuk, H., Spry, E., Coffey, C., Olsson, C., Doyle, L. W., Oats, J., Hearps, S., Carlin, J. B., &amp; Brown, S. (2015). Prediction of perinatal depression from adolescence and before conception (VIHCS): 20-year prospective cohort study. <em>The Lancet</em>, <em>386</em>(10009), 875&ndash;883. https://doi.org/10.1016/S0140-6736(14)62248-0
+        </p>
+        <p>
+            Qobadi, M., &amp; Collier, C. (2016). The association of stressful life events with postpartum depression: Mississippi PRAMS, 2007&ndash;2010. <em>Journal of the Mississippi State Medical Association</em>, <em>57</em>(5), 138&ndash;142.
+        </p>
+        <p>
+            Robertson, E., Grace, S., Wallington, T., &amp; Stewart, D. E. (2004). Antenatal risk factors for postpartum depression: A synthesis of recent literature. <em>General Hospital Psychiatry</em>, <em>26</em>(4), 289&ndash;295. https://doi.org/10.1016/j.genhosppsych.2004.02.006
+        </p>
+        <p>
+            Thomson, K. C., Romaniuk, H., Greenwood, C. J., Letcher, P., Spry, E., Macdonald, J. A., McAnally, H. M., Youssef, G. J., McIntosh, J., Olsson, C. A., &amp; Patton, G. C. (2020). Lifecourse predictors of perinatal mental health: The Victorian Intergenerational Health Cohort Study. <em>Psychological Medicine</em>, <em>50</em>(1), 154&ndash;162. https://doi.org/10.1017/S0033291718004014
+        </p>
+    </div>
+
+    <h2>Appendix</h2>
+    <h3>Table A1: Variable Dictionary</h3>
+    <p>
+        A complete variable dictionary listing all 229 PRAMStat indicators examined in this study, including variable codes, descriptions, coverage periods, and descriptive statistics, is available in the study repository at https://github.com/Mathewmoslow/NovelPramsAnalysis. The dictionary includes indicator-level missingness patterns, the domain classification used for index construction, and notes on harmonization decisions.
+    </p>
+    <h3>Analytic Code Availability</h3>
+    <p>
+        All analytic code used in this study, including data cleaning, index construction, model estimation, robustness checks, and figure generation, is publicly available at https://github.com/Mathewmoslow/NovelPramsAnalysis. All analyses used seed = 42 for reproducibility. The repository includes a complete audit trail documenting all analytic decisions and their rationale.
+    </p>
+
+</div>
+
+</body>
+</html>
